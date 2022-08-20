@@ -4,19 +4,20 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class ColorName implements ValueObject<String>{
+public class CoreType implements ValueObject<String>{
 
     private final String value;
 
-    public ColorName(String value) {
+    public CoreType(String value) {
         this.value = Objects.requireNonNull(value);
         if(this.value.isBlank()){
-            throw new IllegalArgumentException("The Value Object color name cant be blank");
+            throw new IllegalArgumentException("The VO Core type cant be blank");
         }
         if(this.value.length() < 3){
-            throw new IllegalArgumentException("The Value Object color name cant have less than 3 letters");
+            throw new IllegalArgumentException("The VO Core type cant have less than 3 letters");
         }
     }
+
 
     @Override
     public String value() {
@@ -27,8 +28,8 @@ public class ColorName implements ValueObject<String>{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ColorName colorName = (ColorName) o;
-        return Objects.equals(value, colorName.value);
+        CoreType coreType = (CoreType) o;
+        return Objects.equals(value, coreType.value);
     }
 
     @Override

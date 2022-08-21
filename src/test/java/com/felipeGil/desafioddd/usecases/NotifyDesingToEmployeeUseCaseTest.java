@@ -3,14 +3,8 @@ package com.felipeGil.desafioddd.usecases;
 
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
-import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.business.support.TriggeredEvent;
 import com.felipeGil.desafioddd.domain.ball_creation.events.BallCreationCreated;
-import com.felipeGil.desafioddd.domain.ball_creation.events.CompactingMachineAdded;
-import com.felipeGil.desafioddd.domain.ball_creation.events.MaterialChanged;
-import com.felipeGil.desafioddd.domain.ball_creation.values.BallSize;
-import com.felipeGil.desafioddd.domain.ball_creation.values.CompactingMachineId;
-import com.felipeGil.desafioddd.domain.ball_creation.values.Material;
 import com.felipeGil.desafioddd.domain.ball_design.values.BallDesingId;
 import com.felipeGil.desafioddd.domain.generics.EndDate;
 import com.felipeGil.desafioddd.domain.generics.StartDate;

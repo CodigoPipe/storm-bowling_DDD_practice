@@ -73,8 +73,6 @@ Vsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/AddCoverDesi
 Vsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/ChangeBallName.java,3\5\3588a37f937b532754607e0280b2ab134cecd8dc
 †
 Vsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/ChangeCoreType.java,b\a\bad19b6b025c15868afe866964fc2ed2a2dcd1ce
-‡
-Wsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/ChangeColorName.java,e\0\e0db1a254540e781f3bc93850430bf8177bc9b75
 {
 Ksrc/main/java/com/felipeGil/desafioddd/usecases/ChangeColorNameUseCase.java,e\a\ea861e675f69b271e5187471b3e973bf10159d6e
 

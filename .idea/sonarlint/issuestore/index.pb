@@ -7,8 +7,6 @@ Rsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/CoreDesingId.j
 Ssrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/CoverDesingId.java,4\a\4ad1de68101783ab904b02b83538d9e43fe935f2
 }
 Msrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/Surface.java,b\7\b7dfa2d72d9f1e8d36793f1f67cd8d1a14b67658
-ƒ
-Ssrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/ColorDesingId.java,b\0\b0e2b6397ae64049bc117bb38200177e8e995dbf
 u
 Esrc/main/java/com/felipeGil/desafioddd/domain/generics/StartDate.java,c\d\cdc948f268e4d22dec37ff17ab0c60978cd2a059
 s
@@ -29,8 +27,6 @@ Wsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/ChangeCoverT
 Xsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/IncreaseCoreSize.java,0\4\04eac317ad857f9b3e9b8cc6aead742cf83df6bd
 Œ
 \src/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/IncreaseResponseTime.java,e\d\ed4c666a901331dad1096890d97315be0ef0226a
-…
-Usrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/ChangeSurface.java,f\f\ffb976942aa29da4661ebe7bcacb29f69dd70dff
 ~
 Nsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/BallName.java,5\8\58d681f0a3bcad07b029eb4b70b74daeb10b057b
 
@@ -60,8 +56,6 @@ Ysrc/main/java/com/felipeGil/desafioddd/domain/ball_creation/events/HoleSizeIncr
 Œ
 \src/main/java/com/felipeGil/desafioddd/domain/ball_creation/events/NumberOfHolesChanged.java,7\8\786c6db30d44a8617d56b94fb4e50cfc056001b9
 †
-Vsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/AddColorDesing.java,8\7\87d8c4f6be1f5f98cff26c54835f48232c30b876
-†
 Vsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/events/ColorDesingAdded.java,e\c\ec75ced91b9880677b53aede773e0c79d01af856
 …
 Usrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/AddCoreDesing.java,6\f\6fea3e2b096792ad8237c9a81936831df52231f9
@@ -75,5 +69,3 @@ z
 Jsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/CoverDesing.java,6\0\60cfa7ce7744a319e33596a09ad9829c9d296047
 ‡
 Wsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/events/BallDesingCreated.java,b\c\bc83a5ac740e3e8ba7517c306e3904cd6b1f38c2
-}
-Msrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/Density.java,c\1\c120a6f2cea9e4d3962977447d41babc40e96057

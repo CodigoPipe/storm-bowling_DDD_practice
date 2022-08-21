@@ -7,7 +7,7 @@ public class EndDateOfBallCreationUpdated extends DomainEvent {
 
     private final EndDate endDate;
 
-    public EndDateOfBallCreationUpdated(String type, EndDate endDate) {
+    public EndDateOfBallCreationUpdated(EndDate endDate) {
         super("FelipeGil.BallCreation.EndDateOfBallCreationUpdated");
         this.endDate = endDate;
     }

@@ -123,6 +123,11 @@ public class BallCreation extends AggregateEvent<BallCreationId> {
         appendChange(new NotificationSent(message)).apply();
     }
 
+    public void notifyEmployeeMachineReady(String message){
+        Objects.requireNonNull(message);
+        appendChange(new NotificationSent(message)).apply();
+    }
+
     public StartDate startDate() {
         return startDate;
     }

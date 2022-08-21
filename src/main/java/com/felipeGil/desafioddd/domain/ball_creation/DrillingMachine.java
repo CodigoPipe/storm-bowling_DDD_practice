@@ -16,6 +16,7 @@ public class DrillingMachine extends Entity<DrillingMachineId> {
 
     private EmployeeId machineEmployeeId;
 
+
     public DrillingMachine(DrillingMachineId entityId, NumerOfHoles numerOfHoles, HoleSize holeSize) {
         super(entityId);
         this.numerOfHoles = numerOfHoles;

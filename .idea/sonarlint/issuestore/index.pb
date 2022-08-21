@@ -54,8 +54,6 @@ Vsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/events/ColorDesingAdd
 …
 Usrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/AddCoreDesing.java,6\f\6fea3e2b096792ad8237c9a81936831df52231f9
 †
-Vsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/AddCoverDesing.java,f\b\fbd82949d0b9a4baecc62c7d97025a495d3dbf03
-†
 Vsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/ChangeBallName.java,3\5\3588a37f937b532754607e0280b2ab134cecd8dc
 †
 Vsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/ChangeCoreType.java,b\a\bad19b6b025c15868afe866964fc2ed2a2dcd1ce

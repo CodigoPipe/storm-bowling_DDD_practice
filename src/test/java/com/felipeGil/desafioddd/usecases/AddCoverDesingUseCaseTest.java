@@ -3,11 +3,11 @@ package com.felipeGil.desafioddd.usecases;
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
-import com.felipeGil.desafioddd.domain.ball_design.commands.AddColorDesing;
 import com.felipeGil.desafioddd.domain.ball_design.commands.AddCoreDesing;
+import com.felipeGil.desafioddd.domain.ball_design.commands.AddCoverDesing;
 import com.felipeGil.desafioddd.domain.ball_design.events.BallDesingCreated;
-import com.felipeGil.desafioddd.domain.ball_design.events.ColorDesingAdded;
 import com.felipeGil.desafioddd.domain.ball_design.events.CoreDesingAdded;
+import com.felipeGil.desafioddd.domain.ball_design.events.CoverDesingAdded;
 import com.felipeGil.desafioddd.domain.ball_design.values.*;
 import com.felipeGil.desafioddd.domain.generics.EndDate;
 import com.felipeGil.desafioddd.domain.generics.StartDate;
@@ -22,24 +22,24 @@ import java.util.List;
 
 
 @ExtendWith(MockitoExtension.class)
-class AddCoreDesingUseCaseTest {
+class AddCoverDesingUseCaseTest {
 
-    private final String ROOT_ID = "z34zs";
+    private final String ROOT_ID = "45gt56";
 
     @Mock
     private DomainEventRepository repository;
 
     @Test
-    public void addCoreDesingUseCaseTest() {
-        var command = new AddCoreDesing(BallDesingId.of(ROOT_ID), CoreDesingId.of("879944"), new CoreType("Old Solid 33"), new CoreSize(2450));
-        var useCase = new AddCoreDesingUseCase();
+    public void addCoverDesingUseCaseTest() {
+        var command = new AddCoverDesing(BallDesingId.of(ROOT_ID), CoverDesingId.of("879944"), new CoverType("onixNewFire"), new ResponseTime(3), new Surface("new fire old G"));
+        var useCase = new AddCoverDesingUseCase();
 
         Mockito.when(repository.getEventsBy(ROOT_ID)).thenReturn(List.of(
                 new BallDesingCreated(
-                        new BallName("Ideal Pro"),
-                        new BallWeight(13),
-                        new StartDate("01/01/2024"),
-                        new EndDate("09/08/2026")
+                        new BallName("Onix"),
+                        new BallWeight(9),
+                        new StartDate("12/12/2021"),
+                        new EndDate("09/08/2022")
                 )
         ));
         useCase.addRepository(repository);
@@ -50,10 +50,10 @@ class AddCoreDesingUseCaseTest {
                 .orElseThrow(()->new IllegalArgumentException("Something went wrong Adding a the core desing"))
                 .getDomainEvents();
 
-        var event = (CoreDesingAdded)events.get(0);
-        Assertions.assertEquals(command.getCoreSize().value(), event.getCoreSize().value());
-        Assertions. assertEquals(command.getCoreType().value(), event.getCoreType().value());
+        var event = (CoverDesingAdded)events.get(0);
+        Assertions.assertEquals(command.getCoverType().value(), event.getCoverType().value());
+        Assertions. assertEquals(command.getSurface().value(), event.getSurface().value());
+        Assertions. assertEquals(command.getResponseTime().value(), event.getResponseTime().value());
         Mockito.verify(repository).getEventsBy(ROOT_ID);
     }
-
 }

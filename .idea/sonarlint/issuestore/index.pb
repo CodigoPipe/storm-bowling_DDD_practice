@@ -35,8 +35,6 @@ Usrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/ChangeSurfac
 Nsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/BallName.java,5\8\58d681f0a3bcad07b029eb4b70b74daeb10b057b
 
 Osrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/ColorName.java,2\1\21faf9f15da3cd4769066798edf56d2ff9b26960
-~
-Nsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/CoreSize.java,a\2\a2f8e29ee7fe6cabe598001c4879ceb16d256c53
 ‚
 Rsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/ResponseTime.java,8\7\878aa0a2926a4931acbb6568ea7426c67ffbb943
 €
@@ -73,10 +71,6 @@ Vsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/AddCoverDesi
 Vsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/ChangeBallName.java,3\5\3588a37f937b532754607e0280b2ab134cecd8dc
 †
 Vsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/ChangeCoreType.java,b\a\bad19b6b025c15868afe866964fc2ed2a2dcd1ce
-{
-Ksrc/main/java/com/felipeGil/desafioddd/usecases/ChangeColorNameUseCase.java,e\a\ea861e675f69b271e5187471b3e973bf10159d6e
-
-Osrc/test/java/com/felipeGil/desafioddd/usecases/ChangeColorNameUseCaseTest.java,c\b\cbab00f735b26fa375a5b154b5cff779ee27e909
 z
 Jsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/CoverDesing.java,6\0\60cfa7ce7744a319e33596a09ad9829c9d296047
 ‡

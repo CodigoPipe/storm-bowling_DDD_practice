@@ -3,10 +3,11 @@ package com.felipeGil.desafioddd.usecases;
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
-import com.felipeGil.desafioddd.domain.ball_design.commands.ChangeColorName;
+import com.felipeGil.desafioddd.domain.ball_design.commands.ChangeCoreType;
 import com.felipeGil.desafioddd.domain.ball_design.events.BallDesingCreated;
-import com.felipeGil.desafioddd.domain.ball_design.events.ColorDesingAdded;
 import com.felipeGil.desafioddd.domain.ball_design.events.ColorNameChanged;
+import com.felipeGil.desafioddd.domain.ball_design.events.CoreDesingAdded;
+import com.felipeGil.desafioddd.domain.ball_design.events.CoreTypeChanged;
 import com.felipeGil.desafioddd.domain.ball_design.values.*;
 import com.felipeGil.desafioddd.domain.generics.EndDate;
 import com.felipeGil.desafioddd.domain.generics.StartDate;
@@ -21,40 +22,39 @@ import java.util.List;
 
 
 @ExtendWith(MockitoExtension.class)
-class ChangeColorNameUseCaseTest {
+class ChangeCoreTypeUseCaseTest {
 
-    private final String ROOT_ID = "564573";
+    private final String ROOT_ID = "29345";
 
     @Mock
     private DomainEventRepository repository;
 
     @Test
-    public void changeColorNameUseCaseTest(){
-        var command = new ChangeColorName(BallDesingId.of(ROOT_ID), ColorDesingId.of("676745"), new ColorName("Blue"));
-        var useCase = new ChangeColorNameUseCase();
+    public void changeCoreTypeUseCaseTest(){
+        var command = new ChangeCoreType(BallDesingId.of(ROOT_ID), CoreDesingId.of("4334"), new CoreType("Rst-x1"));
+        var useCase = new ChangeCoreTypeUseCase();
         Mockito.when(repository.getEventsBy(ROOT_ID)).thenReturn(List.of(
                 new BallDesingCreated(
-                        new BallName("Reality"),
-                        new BallWeight(15),
-                        new StartDate("02/02/2020"),
-                        new EndDate("05/05/2022")
+                        new BallName("Iq tour"),
+                        new BallWeight(11),
+                        new StartDate("03/011/2001"),
+                        new EndDate("02/11/2002")
                 ),
-                new ColorDesingAdded(
-                        ColorDesingId.of("676745"),
-                        new ColorName("amarillo"),
-                        new Density(66)
+                new CoreDesingAdded(
+                        CoreDesingId.of("4334"),
+                        new CoreType("Uc-3"),
+                        new CoreSize(1100)
                 )
         ));
         useCase.addRepository(repository);
         var events = UseCaseHandler
                 .getInstance()
                 .syncExecutor(useCase, new RequestCommand<>(command))
-                .orElseThrow(()->new IllegalArgumentException("Something went wrong changing the color name"))
+                .orElseThrow(()->new IllegalArgumentException("Something went wrong changing the core size"))
                 .getDomainEvents();
 
-        var event = (ColorNameChanged)events.get(0);
-        Assertions.assertEquals(command.getColorName().value(), event.getColorName().value());
+        var event = (CoreTypeChanged)events.get(0);
+        Assertions.assertEquals(command.getCoreType().value(), event.getCoreType().value());
         Mockito.verify(repository).getEventsBy(ROOT_ID);
     }
-
 }

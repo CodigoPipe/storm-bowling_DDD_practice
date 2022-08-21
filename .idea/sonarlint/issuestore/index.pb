@@ -119,8 +119,6 @@ Ssrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/ColorDesingId.
 Vsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/AddColorDesing.java,8\7\87d8c4f6be1f5f98cff26c54835f48232c30b876
 }
 Msrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/Density.java,c\1\c120a6f2cea9e4d3962977447d41babc40e96057
-{
-Ksrc/main/java/com/felipeGil/desafioddd/usecases/ChangeColorNameUseCase.java,e\a\ea861e675f69b271e5187471b3e973bf10159d6e
 †
 Vsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/events/CoverDesingAdded.java,5\3\5362eba8ec9c047d8506cde3c44e848bf855ee18
 ‚

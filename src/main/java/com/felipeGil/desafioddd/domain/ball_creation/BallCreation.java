@@ -38,7 +38,7 @@ public class BallCreation extends AggregateEvent<BallCreationId> {
 
     public BallCreation(BallCreationId entityId) {
         super(entityId);
-        subscribe(new BallDesingChange(this));
+        subscribe(new BallCreationChange(this));
     }
 
     public static BallCreation from(BallCreationId entityId, List<DomainEvent> events) {

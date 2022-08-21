@@ -5,8 +5,6 @@
 Rsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/CoreDesingId.java,1\8\18f02d167098928724f2b4cb66a40fc5bf833008
 ƒ
 Ssrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/CoverDesingId.java,4\a\4ad1de68101783ab904b02b83538d9e43fe935f2
-}
-Msrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/Surface.java,b\7\b7dfa2d72d9f1e8d36793f1f67cd8d1a14b67658
 u
 Esrc/main/java/com/felipeGil/desafioddd/domain/generics/StartDate.java,c\d\cdc948f268e4d22dec37ff17ab0c60978cd2a059
 s
@@ -31,8 +29,6 @@ Xsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/IncreaseCore
 Nsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/BallName.java,5\8\58d681f0a3bcad07b029eb4b70b74daeb10b057b
 
 Osrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/ColorName.java,2\1\21faf9f15da3cd4769066798edf56d2ff9b26960
-‚
-Rsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/ResponseTime.java,8\7\878aa0a2926a4931acbb6568ea7426c67ffbb943
 €
 Psrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/BallWeight.java,f\6\f616d29688a94314655a02b2498014b4e2a8ae36
 „

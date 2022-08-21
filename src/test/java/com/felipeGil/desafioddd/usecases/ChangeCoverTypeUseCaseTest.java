@@ -4,10 +4,8 @@ import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
 import com.felipeGil.desafioddd.domain.ball_design.commands.ChangeCoreType;
-import com.felipeGil.desafioddd.domain.ball_design.events.BallDesingCreated;
-import com.felipeGil.desafioddd.domain.ball_design.events.ColorNameChanged;
-import com.felipeGil.desafioddd.domain.ball_design.events.CoreDesingAdded;
-import com.felipeGil.desafioddd.domain.ball_design.events.CoreTypeChanged;
+import com.felipeGil.desafioddd.domain.ball_design.commands.ChangeCoverType;
+import com.felipeGil.desafioddd.domain.ball_design.events.*;
 import com.felipeGil.desafioddd.domain.ball_design.values.*;
 import com.felipeGil.desafioddd.domain.generics.EndDate;
 import com.felipeGil.desafioddd.domain.generics.StartDate;
@@ -22,39 +20,40 @@ import java.util.List;
 
 
 @ExtendWith(MockitoExtension.class)
-class ChangeCoreTypeUseCaseTest {
+class ChangeCoverTypeUseCaseTest {
 
-    private final String ROOT_ID = "29345";
+    private final String ROOT_ID = "ff3445";
 
     @Mock
     private DomainEventRepository repository;
 
     @Test
-    public void changeCoreTypeUseCaseTest(){
-        var command = new ChangeCoreType(BallDesingId.of(ROOT_ID), CoreDesingId.of("4334"), new CoreType("Rst-x1"));
-        var useCase = new ChangeCoreTypeUseCase();
+    public void changeCoverTypeUseCaseTest(){
+        var command = new ChangeCoverType(BallDesingId.of(ROOT_ID), CoverDesingId.of("tt5656"), new CoverType("Rex-PearlReactive"));
+        var useCase = new ChangeCoverTypeUseCase();
         Mockito.when(repository.getEventsBy(ROOT_ID)).thenReturn(List.of(
                 new BallDesingCreated(
-                        new BallName("Iq tour"),
-                        new BallWeight(11),
-                        new StartDate("03/11/2001"),
-                        new EndDate("02/11/2002")
+                        new BallName("Parallax"),
+                        new BallWeight(14),
+                        new StartDate("04/11/2012"),
+                        new EndDate("02/11/2013")
                 ),
-                new CoreDesingAdded(
-                        CoreDesingId.of("4334"),
-                        new CoreType("Uc-3"),
-                        new CoreSize(1100)
+                new CoverDesingAdded(
+                        CoverDesingId.of("4334"),
+                        new CoverType("Dark Solid"),
+                        new ResponseTime(8),
+                        new Surface("polished 1200")
                 )
         ));
         useCase.addRepository(repository);
         var events = UseCaseHandler
                 .getInstance()
                 .syncExecutor(useCase, new RequestCommand<>(command))
-                .orElseThrow(()->new IllegalArgumentException("Something went wrong changing the core size"))
+                .orElseThrow(()->new IllegalArgumentException("Something went wrong changing the cover type"))
                 .getDomainEvents();
 
-        var event = (CoreTypeChanged)events.get(0);
-        Assertions.assertEquals(command.getCoreType().value(), event.getCoreType().value());
+        var event = (CoverTypeChanged)events.get(0);
+        Assertions.assertEquals(command.getCoverType().value(), event.getCoverType().value());
         Mockito.verify(repository).getEventsBy(ROOT_ID);
     }
 }

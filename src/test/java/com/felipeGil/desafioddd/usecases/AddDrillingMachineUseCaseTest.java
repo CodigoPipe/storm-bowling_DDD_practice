@@ -7,6 +7,7 @@ import com.felipeGil.desafioddd.domain.ball_creation.commands.AddDrillingMachine
 import com.felipeGil.desafioddd.domain.ball_creation.events.BallCreationCreated;
 import com.felipeGil.desafioddd.domain.ball_creation.events.DrillingMachineAdded;
 import com.felipeGil.desafioddd.domain.ball_creation.values.*;
+import com.felipeGil.desafioddd.domain.ball_design.values.BallDesingId;
 import com.felipeGil.desafioddd.domain.generics.EndDate;
 import com.felipeGil.desafioddd.domain.generics.StartDate;
 import org.junit.jupiter.api.Assertions;
@@ -35,7 +36,8 @@ class AddDrillingMachineUseCaseTest {
         Mockito.when(repository.getEventsBy(ROOT_ID)).thenReturn(List.of(
                 new BallCreationCreated(
                         new StartDate("04/08/2021"),
-                        new EndDate("02/06/2022")
+                        new EndDate("02/06/2022"),
+                        new BallDesingId()
                 )
         ));
         useCase.addRepository(repository);

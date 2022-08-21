@@ -4,15 +4,10 @@ import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import com.felipeGil.desafioddd.domain.ball_creation.events.*;
 import com.felipeGil.desafioddd.domain.ball_creation.values.*;
-import com.felipeGil.desafioddd.domain.ball_design.BallDesing;
-import com.felipeGil.desafioddd.domain.ball_design.BallDesingChange;
-import com.felipeGil.desafioddd.domain.ball_design.events.BallNameChanged;
-import com.felipeGil.desafioddd.domain.ball_design.events.ColorDesingAdded;
-import com.felipeGil.desafioddd.domain.ball_design.events.EndDateOfBallDesingUpdated;
-import com.felipeGil.desafioddd.domain.ball_design.events.StartDateOfBallDesingFixed;
-import com.felipeGil.desafioddd.domain.ball_design.values.*;
+import com.felipeGil.desafioddd.domain.ball_design.values.BallDesingId;
 import com.felipeGil.desafioddd.domain.generics.EndDate;
 import com.felipeGil.desafioddd.domain.generics.StartDate;
+import com.felipeGil.desafioddd.domain.generics.events.NotificationSent;
 
 import java.util.List;
 import java.util.Objects;
@@ -20,6 +15,8 @@ import java.util.Objects;
 
 public class BallCreation extends AggregateEvent<BallCreationId> {
 
+
+    protected BallDesingId ballDesingId;
 
     protected StartDate startDate;
 
@@ -31,9 +28,9 @@ public class BallCreation extends AggregateEvent<BallCreationId> {
 
     protected Employee employee;
 
-    public BallCreation(BallCreationId entityId, StartDate startDate, EndDate endDate) {
+    public BallCreation(BallCreationId entityId, StartDate startDate, EndDate endDate, BallDesingId ballDesingId) {
         super(entityId);
-        appendChange(new BallCreationCreated(startDate, endDate)).apply();
+        appendChange(new BallCreationCreated(startDate, endDate, ballDesingId)).apply();
     }
 
     public BallCreation(BallCreationId entityId) {
@@ -121,6 +118,11 @@ public class BallCreation extends AggregateEvent<BallCreationId> {
         appendChange(new EndDateOfBallCreationUpdated(endDate));
     }
 
+    public void notifyDesingToEmployees(String message){
+        Objects.requireNonNull(message);
+        appendChange(new NotificationSent(message)).apply();
+    }
+
     public StartDate startDate() {
         return startDate;
     }
@@ -139,5 +141,9 @@ public class BallCreation extends AggregateEvent<BallCreationId> {
 
     public Employee employee() {
         return employee;
+    }
+
+    public BallDesingId ballDesingId() {
+        return ballDesingId;
     }
 }

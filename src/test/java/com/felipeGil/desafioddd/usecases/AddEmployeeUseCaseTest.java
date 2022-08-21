@@ -7,6 +7,7 @@ import com.felipeGil.desafioddd.domain.ball_creation.commands.AddEmployee;
 import com.felipeGil.desafioddd.domain.ball_creation.events.BallCreationCreated;
 import com.felipeGil.desafioddd.domain.ball_creation.events.EmployeeAdded;
 import com.felipeGil.desafioddd.domain.ball_creation.values.*;
+import com.felipeGil.desafioddd.domain.ball_design.values.BallDesingId;
 import com.felipeGil.desafioddd.domain.generics.EndDate;
 import com.felipeGil.desafioddd.domain.generics.StartDate;
 import org.junit.jupiter.api.Assertions;
@@ -35,7 +36,8 @@ class AddEmployeeUseCaseTest {
         Mockito.when(repository.getEventsBy(ROOT_ID)).thenReturn(List.of(
                 new BallCreationCreated(
                         new StartDate("03/12/2021"),
-                        new EndDate("02/05/2022")
+                        new EndDate("02/05/2022"),
+                        new BallDesingId()
                 )
         ));
         useCase.addRepository(repository);

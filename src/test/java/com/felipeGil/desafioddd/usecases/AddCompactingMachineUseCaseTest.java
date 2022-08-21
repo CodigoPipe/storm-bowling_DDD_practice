@@ -10,6 +10,7 @@ import com.felipeGil.desafioddd.domain.ball_creation.values.BallCreationId;
 import com.felipeGil.desafioddd.domain.ball_creation.values.BallSize;
 import com.felipeGil.desafioddd.domain.ball_creation.values.CompactingMachineId;
 import com.felipeGil.desafioddd.domain.ball_creation.values.Material;
+import com.felipeGil.desafioddd.domain.ball_design.values.BallDesingId;
 import com.felipeGil.desafioddd.domain.generics.EndDate;
 import com.felipeGil.desafioddd.domain.generics.StartDate;
 import org.junit.jupiter.api.Assertions;
@@ -39,7 +40,8 @@ class AddCompactingMachineUseCaseTest {
         Mockito.when(repository.getEventsBy(ROOT_ID)).thenReturn(List.of(
                 new BallCreationCreated(
                         new StartDate("02/08/2025"),
-                        new EndDate("02/06/2026")
+                        new EndDate("02/06/2026"),
+                        new BallDesingId()
                 )
         ));
         useCase.addRepository(repository);

@@ -11,8 +11,6 @@ s
 Csrc/main/java/com/felipeGil/desafioddd/domain/generics/EndDate.java,a\3\a3cc10c204bb99f3554ee19c9e3677a0d79ddd63
 
 Osrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/CoverType.java,9\9\99f3b898e35408ec8d9c68f53f85837a09a9b4ff
-~
-Nsrc/main/java/com/felipeGil/desafioddd/domain/ball_design/values/CoreType.java,e\9\e9042b9c5eee0da80563cf72ed64c26c13992e31
 ‘
 asrc/main/java/com/felipeGil/desafioddd/domain/ball_design/commands/UpdateEndDateOfBallDesing.java,9\5\95273a26f4de977319a5685e6a92f21ecadf277d
 Š
